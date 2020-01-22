@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/launchCricket}" th:object="${launchCricket}" method="post">
+    <p>Enter Team 1 <input type="text" th:field="*{team1}" /></p>
+    <p>Enter Team 2<input type="text" th:field="*{team2}" /></p>
+    <p>Winner :  <input type="text" th:field="*{winner}" placeholder="will be declared soon..."/></p>
+    <p><input type="submit" value="Start Match" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
